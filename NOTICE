@@ -1,0 +1,29 @@
+Pelican World (agent skill and tutorial)
+Copyright 2026 benphant
+
+This package contains an agent skill, tutorial, and documentation that
+describe a method for building cinematic, offline, single-file 3D web
+games. It is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The Apache License in this package covers only the skill, tutorial, and
+documentation files distributed here. It does not grant any license to:
+
+  - the Pelican World game client or any compiled HTML build of the game;
+  - the game's source code (for example src/, template.html, build scripts);
+  - any third-party reference demo (including a file referred to in the
+    original methodology notes as reference.html).
+
+Those works are not included in this package.
+
+The playable Pelican World game remains copyright 2026 benphant. All
+rights reserved. A playable build is published separately at:
+
+  https://pelican-world.vercel.app/
+
+Trademarks, product names, and logos (including "Pelican World" and
+"鹈鹕环游世界") are not licensed for general use except as needed to
+describe the origin of this work and to reproduce this NOTICE.
+
+When a reader follows this tutorial and bundles third-party libraries
+(for example three.js) into their own game, those components keep their
+own licenses. See THIRD_PARTY_NOTICES.md.

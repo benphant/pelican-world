@@ -1,0 +1,90 @@
+# Pelican World
+
+> An agent skill for building cinematic, offline, single-file 3D web
+> games with procedural models, textures, and audio. Free tutorial
+> documentation under Apache-2.0. The Pelican World game client is a
+> separate, all-rights-reserved work and is not installed by this file.
+
+Version: 0.1.0
+Repository: https://github.com/benphant/pelican-world
+Playable game (not part of this skill): https://pelican-world.vercel.app/
+
+## Install for the user
+
+If you are an agent asked to install the Pelican World skill, do only
+the steps below. Tell the user what each command will run, then wait
+for them to confirm the scope before you install. Do not start a game,
+scaffold a project, scan a repository, or change anything else as part
+of installation.
+
+The public repository is https://github.com/benphant/pelican-world.
+Prefer a local copy when the user gives you this folder. The remote
+command in section B installs from the default branch. Use it only when
+`pelican-world/SKILL.md` is already on `main`. If it is not, stop and
+use the local copy. Do not retry a failing remote install as a
+workaround, and do not claim that install succeeded.
+
+Confirm this scope first:
+
+- Global or the current project only.
+- Target agent: the agent you are running in, unless the user names others.
+
+### A. Local folder
+
+1. Locate the skill directory named `pelican-world` that contains
+   `SKILL.md` (in this package it sits at `pelican-world/` next to this
+   file).
+2. Copy that directory, without renaming it, into the skills location
+   the skills CLI uses for that agent:
+
+   - Cursor, project: `.agents/skills/pelican-world`
+   - Cursor, user: `~/.cursor/skills/pelican-world`
+   - Codex, project: `.agents/skills/pelican-world`
+   - Codex, user: `~/.agents/skills/pelican-world`
+   - Claude Code, project: `.claude/skills/pelican-world`
+   - Claude Code, user: `~/.claude/skills/pelican-world`
+   - OpenCode, project: `.agents/skills/pelican-world`
+   - OpenCode, user: `~/.config/opencode/skills/pelican-world`
+
+3. If a destination already contains unmanaged files, stop and report
+   the conflict. Do not delete those files.
+4. Verify that `SKILL.md` is present at the destination and report the
+   absolute path. Stop there.
+
+### B. GitHub install
+
+Use this only when the user confirms that
+https://github.com/benphant/pelican-world is public and that
+`pelican-world/SKILL.md` is on the default branch (`main`). If the
+skill is only on a pull-request branch, these commands do not install
+it. Do not retry them as a workaround, and do not report a successful
+install from `main` unless you actually completed one.
+
+Documented form:
+
+```bash
+npx skills add benphant/pelican-world --skill pelican-world
+```
+
+One agent, non-interactive (replace `<agent>` with `cursor`, `codex`,
+`claude-code`, or `opencode`):
+
+```bash
+npx -y skills@latest add https://github.com/benphant/pelican-world --skill pelican-world --agent <agent> --global --copy --yes
+```
+
+Omit `--global` for a project-only install. Do not add other skills,
+agents, sources, or force flags.
+
+After a successful install, report the destination path. If you were
+only asked to install the skill, stop here.
+
+## After installation
+
+The skill does not ship a game engine binary. The user asks you to use
+the Pelican World skill when they want a playable, offline, single-file
+3D web game, or when they want to apply this method to an existing
+project. Read `pelican-world/SKILL.md` in the installed copy and follow
+it. The playable reference game, if they want to see it, is at
+https://pelican-world.vercel.app/ — do not download or redistribute
+that HTML as if it were part of this skill.
